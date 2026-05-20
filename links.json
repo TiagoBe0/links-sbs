@@ -1,38 +1,51 @@
 [
-  {
-    "title": "Nature",
-    "url": "https://www.nature.com",
-    "category": "Journals",
-    "description": "Multidisciplinary science journal"
-  },
-  {
-    "title": "arXiv",
-    "url": "https://arxiv.org",
-    "category": "Preprints",
-    "description": "Open-access preprint repository"
-  },
-  {
-    "title": "PubMed",
-    "url": "https://pubmed.ncbi.nlm.nih.gov",
-    "category": "Databases",
+    {
+    "title": "SOAP-Descriptor",
+    "url": "https://docs.google.com/presentation/d/1pLsUV9BdxvwDCGVH8DSVASIJKi1JfsEz/edit?usp=sharing&ouid=105907419344136001306&rtpof=true&sd=true",
+    "category": "ppt",
     "description": "Biomedical literature database"
   },
-  {
-    "title": "Google Scholar",
-    "url": "https://scholar.google.com",
-    "category": "Search",
-    "description": "Academic search engine"
+      {
+    "title": "Nanowire Ag",
+    "url": "https://docs.google.com/presentation/d/1_uySEdy98BO7RO-Sc0r3HEkTkmsAfBXZWT8WF6ebWas/edit?usp=sharing",
+    "category": "ppt",
+    "description": "doc"
+  },
+    {
+    "title": "Carbono Amorfo",
+    "url": "https://docs.google.com/presentation/d/1Kv0D7yhNEqBekh1vwePa0E3VXzi6ExL06g1MJ5r57_g/edit?usp=sharing",
+    "category": "ppt",
+    "description": "doc"
   },
   {
-    "title": "Sci-Hub",
-    "url": "https://sci-hub.se",
-    "category": "Access",
+    "title": "portfolio",
+    "url": "https://app.netlify.com/projects/portfolio-santiago-bergamin-saua/overview",
+    "category": "perfil",
+    "description": "cv-web"
+  },
+  {
+    "title": "pappershub",
+    "url": "https://pappers-hub.netlify.app/",
+    "category": "resumenes pappers",
+    "description": "Open-access"
+  },
+
+  {
+    "title": "lab web",
+    "url": "https://simaf-lab.netlify.app/",
+    "category": "autor",
+    "description": "web de mi laboratorio"
+  },
+  {
+    "title": "teoria daño por radiacion",
+    "url": "https://primary-radiation-damage.netlify.app/",
+    "category": "doctorado",
     "description": "Open access to research papers"
   },
   {
-    "title": "JSTOR",
-    "url": "https://www.jstor.org",
-    "category": "Databases",
+    "title": "LAMMPS-GUIDE",
+    "url": "https://lammps-guide.netlify.app/",
+    "category": "resumen para principiantes",
     "description": "Digital library of academic journals"
   }
 ]
