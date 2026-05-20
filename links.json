@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Nature",
+    "url": "https://www.nature.com",
+    "category": "Journals",
+    "description": "Multidisciplinary science journal"
+  },
+  {
+    "title": "arXiv",
+    "url": "https://arxiv.org",
+    "category": "Preprints",
+    "description": "Open-access preprint repository"
+  },
+  {
+    "title": "PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov",
+    "category": "Databases",
+    "description": "Biomedical literature database"
+  },
+  {
+    "title": "Google Scholar",
+    "url": "https://scholar.google.com",
+    "category": "Search",
+    "description": "Academic search engine"
+  },
+  {
+    "title": "Sci-Hub",
+    "url": "https://sci-hub.se",
+    "category": "Access",
+    "description": "Open access to research papers"
+  },
+  {
+    "title": "JSTOR",
+    "url": "https://www.jstor.org",
+    "category": "Databases",
+    "description": "Digital library of academic journals"
+  }
+]

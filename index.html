@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scientific Link Hub</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:wght@400;600&display=swap');
+
+    :root {
+      --ink: #1a1a1a;
+      --paper: #f5f0e8;
+      --paper-dark: #ece6d8;
+      --rule: #2c2c2c;
+      --accent: #8b1a1a;
+      --accent-light: #c0392b;
+      --muted: #6b6b6b;
+      --border: #ccc3b0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── MASTHEAD ── */
+    header {
+      border-bottom: 3px double var(--rule);
+      padding: 2rem 3rem 1rem;
+      text-align: center;
+      background: var(--paper);
+    }
+
+    .vol-line {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    header h1 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+
+    header h1 span {
+      display: block;
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-top: 0.3rem;
+    }
+
+    .rule-thin {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0.8rem auto;
+      width: 60%;
+    }
+
+    .dateline {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* ── CONTROLS ── */
+    .controls {
+      max-width: 900px;
+      margin: 1.5rem auto 0;
+      padding: 0 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .search-wrap {
+      flex: 1;
+      min-width: 180px;
+      position: relative;
+    }
+
+    .search-wrap input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1.5px solid var(--border);
+      padding: 0.3rem 0.3rem 0.3rem 1.4rem;
+      font-family: 'EB Garamond', serif;
+      font-size: 0.95rem;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-wrap input:focus { border-bottom-color: var(--accent); }
+
+    .search-wrap::before {
+      content: '⌕';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .filter-select {
+      background: transparent;
+      border: none;
+      border-bottom: 1.5px solid var(--border);
+      padding: 0.3rem 1.4rem 0.3rem 0.3rem;
+      font-family: 'EB Garamond', serif;
+      font-size: 0.95rem;
+      color: var(--ink);
+      outline: none;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236b6b6b'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.2rem center;
+    }
+
+    .filter-select:focus { border-bottom-color: var(--accent); }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 3rem 4rem;
+    }
+
+    /* ── CATEGORY SECTIONS ── */
+    .section-rule {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin: 2rem 0 1rem;
+    }
+
+    .section-rule h2 {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .section-rule::after {
+      content: '';
+      flex: 1;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── LINK GRID ── */
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1px;
+      border: 1px solid var(--border);
+      background: var(--border);
+    }
+
+    /* ── LINK CARD ── */
+    .link-card {
+      background: var(--paper);
+      padding: 1rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      transition: background 0.15s;
+      position: relative;
+    }
+
+    .link-card:hover { background: var(--paper-dark); }
+
+    .link-card a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .card-category {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .card-title {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .card-desc {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.3;
+    }
+
+    .card-arrow {
+      margin-top: auto;
+      font-size: 0.75rem;
+      color: var(--border);
+      align-self: flex-end;
+      transition: color 0.15s;
+    }
+
+    .link-card:hover .card-arrow { color: var(--accent); }
+
+    /* ── EMPTY STATE ── */
+    .empty {
+      text-align: center;
+      padding: 3rem;
+      color: var(--muted);
+      font-style: italic;
+      grid-column: 1 / -1;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 3px double var(--rule);
+      text-align: center;
+      padding: 1rem 3rem;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      header { padding: 1.5rem 1.2rem 1rem; }
+      header h1 { font-size: 2rem; }
+      .controls, main { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .link-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p class="vol-line">Personal Reference Index &mdash; Est. 2025</p>
+    <h1>
+      Scientific Link Hub
+      <span>A curated compendium of research resources</span>
+    </h1>
+    <hr class="rule-thin" />
+    <p class="dateline" id="dateline"></p>
+  </header>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <input type="text" id="search" placeholder="Search links&hellip;" autocomplete="off" />
+    </div>
+    <select class="filter-select" id="category-filter">
+      <option value="">All categories</option>
+    </select>
+  </div>
+
+  <main id="main"></main>
+
+  <footer>
+    Loaded from links.json &mdash; edit the file to add or remove entries
+  </footer>
+
+  <script>
+    // ── DATE LINE ──
+    const dateline = document.getElementById('dateline');
+    dateline.textContent = new Date().toLocaleDateString('en-US', {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+    });
+
+    // ── STATE ──
+    let allLinks = [];
+    let searchQuery = '';
+    let activeCategory = '';
+
+    // ── RENDER ──
+    function render() {
+      const main = document.getElementById('main');
+      main.innerHTML = '';
+
+      const filtered = allLinks.filter(link => {
+        const q = searchQuery.toLowerCase();
+        const matchSearch = !q ||
+          link.title.toLowerCase().includes(q) ||
+          (link.description || '').toLowerCase().includes(q) ||
+          (link.category || '').toLowerCase().includes(q);
+        const matchCat = !activeCategory || link.category === activeCategory;
+        return matchSearch && matchCat;
+      });
+
+      if (filtered.length === 0) {
+        const grid = document.createElement('div');
+        grid.className = 'link-grid';
+        grid.innerHTML = '<p class="empty">No links found.</p>';
+        main.appendChild(grid);
+        return;
+      }
+
+      // Group by category
+      const groups = {};
+      filtered.forEach(link => {
+        const cat = link.category || 'Uncategorized';
+        if (!groups[cat]) groups[cat] = [];
+        groups[cat].push(link);
+      });
+
+      Object.entries(groups).sort(([a], [b]) => a.localeCompare(b)).forEach(([cat, links]) => {
+        const section = document.createElement('section');
+
+        const rule = document.createElement('div');
+        rule.className = 'section-rule';
+        rule.innerHTML = `<h2>${cat}</h2>`;
+        section.appendChild(rule);
+
+        const grid = document.createElement('div');
+        grid.className = 'link-grid';
+
+        links.forEach(link => {
+          const card = document.createElement('div');
+          card.className = 'link-card';
+          card.innerHTML = `
+            <a href="${escapeAttr(link.url)}" target="_blank" rel="noopener noreferrer">
+              <span class="card-category">${escHtml(link.category || '')}</span>
+              <span class="card-title">${escHtml(link.title)}</span>
+              ${link.description ? `<span class="card-desc">${escHtml(link.description)}</span>` : ''}
+              <span class="card-arrow">↗</span>
+            </a>
+          `;
+          grid.appendChild(card);
+        });
+
+        section.appendChild(grid);
+        main.appendChild(section);
+      });
+    }
+
+    // ── POPULATE CATEGORY FILTER ──
+    function populateFilter(links) {
+      const sel = document.getElementById('category-filter');
+      const cats = [...new Set(links.map(l => l.category).filter(Boolean))].sort();
+      cats.forEach(cat => {
+        const opt = document.createElement('option');
+        opt.value = cat;
+        opt.textContent = cat;
+        sel.appendChild(opt);
+      });
+    }
+
+    // ── ESCAPE HELPERS ──
+    function escHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+    function escapeAttr(str) {
+      // Only allow http/https URLs
+      const s = String(str).trim();
+      if (!/^https?:\/\//i.test(s)) return '#';
+      return s.replace(/"/g, '%22');
+    }
+
+    // ── EVENTS ──
+    document.getElementById('search').addEventListener('input', e => {
+      searchQuery = e.target.value;
+      render();
+    });
+
+    document.getElementById('category-filter').addEventListener('change', e => {
+      activeCategory = e.target.value;
+      render();
+    });
+
+    // ── LOAD DATA ──
+    fetch('links.json')
+      .then(r => {
+        if (!r.ok) throw new Error('Could not load links.json');
+        return r.json();
+      })
+      .then(data => {
+        allLinks = Array.isArray(data) ? data : [];
+        populateFilter(allLinks);
+        render();
+      })
+      .catch(err => {
+        document.getElementById('main').innerHTML =
+          `<p style="color:var(--accent);font-style:italic;padding:2rem">${err.message}</p>`;
+      });
+  </script>
+</body>
+</html>
