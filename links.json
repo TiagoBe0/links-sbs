@@ -40,6 +40,12 @@
     "category": "resumenes pappers",
     "description": "Open-access"
   },
+      {
+    "title": "ilovepappers",
+    "url": "https://ilovepapers.netlify.app/",
+    "category": "resumenes pappers",
+    "description": "Open-access"
+  },
 
   {
     "title": "lab web",
