@@ -28,12 +28,7 @@
     "category": "ppt",
     "description": "doc"
   },
-  {
-    "title": "portfolio",
-    "url": "https://app.netlify.com/projects/portfolio-santiago-bergamin-saua/overview",
-    "category": "perfil",
-    "description": "cv-web"
-  },
+ 
   {
     "title": "pappershub",
     "url": "https://pappers-hub.netlify.app/",
@@ -52,6 +47,12 @@
     "url": "https://simaf-lab.netlify.app/",
     "category": "autor",
     "description": "web de mi laboratorio"
+  },  
+    {
+    "title": "Simulations Visualizer",
+    "url": "https://leu-draws-links-university.trycloudflare.com/",
+    "category": "autor",
+    "description": "Visualizar y descargar simulaciones"
   },
   {
     "title": "teoria daño por radiacion",
@@ -64,5 +65,10 @@
     "url": "https://lammps-guide.netlify.app/",
     "category": "resumen para principiantes",
     "description": "Digital library of academic journals"
-  }
+  }, {
+    "title": "portfolio",
+    "url": "https://app.netlify.com/projects/portfolio-santiago-bergamin-saua/overview",
+    "category": "perfil",
+    "description": "web cv"
+  },
 ]
