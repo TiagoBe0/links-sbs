@@ -353,7 +353,12 @@
         groups[cat].push(link);
       });
 
-      Object.entries(groups).sort(([a], [b]) => a.localeCompare(b)).forEach(([cat, links]) => {
+      const PPT_THEORY = 'ppt-theory';
+      Object.entries(groups).sort(([a], [b]) => {
+        if (a.toLowerCase() === PPT_THEORY) return -1;
+        if (b.toLowerCase() === PPT_THEORY) return 1;
+        return a.localeCompare(b);
+      }).forEach(([cat, links]) => {
         const sec = document.createElement('div');
         sec.className = 'other-section';
 
