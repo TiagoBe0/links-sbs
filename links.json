@@ -25,10 +25,39 @@
      {
     "title": "Carbono Amorfo Teoría",
     "url": "https://docs.google.com/presentation/d/13HXiXmzHnn_u9OuW27EZT1Wox8eUIRZ0/edit?usp=sharing&ouid=105907419344136001306&rtpof=true&sd=true",
-    "category": "ppt",
+    "category": "ppt-theory",
     "description": "doc"
   },
- 
+      {
+    "title": "Mecanica Estadistica",
+    "url": "https://docs.google.com/presentation/d/1OwVgeqgTGnr9WmFNcI1vp3lFpOvOwQ0R/edit?usp=sharing&ouid=114917948854543030422&rtpof=true&sd=true",
+    "category": "ppt-theory",
+    "description": "doc"
+  },
+          {
+    "title": "Mecanica Clásica",
+    "url": "https://docs.google.com/presentation/d/1lF51P93Tck-NZvJBjyMXsc_-OQH5-rHq/edit?usp=sharing&ouid=114917948854543030422&rtpof=true&sd=true",
+    "category": "ppt-theory",
+    "description": "doc"
+  },
+              {
+    "title": "Radiation Damage",
+    "url": "https://docs.google.com/presentation/d/17gMOaf1uuTPkddi-Ue3BL1-8z0B_mlmG/edit?usp=sharing&ouid=114917948854543030422&rtpof=true&sd=true",
+    "category": "ppt-theory",
+    "description": "doc"
+  },
+                  {
+    "title": "Elasticidad Potenciales MD",
+    "url": "https://docs.google.com/presentation/d/1wY2bfYWplGyL8aZgklBedApTER4ZisDN/edit?usp=sharing&ouid=114917948854543030422&rtpof=true&sd=true",
+    "category": "ppt-theory",
+    "description": "doc"
+  },
+                      {
+    "title": "Estado Solido Defectos MD",
+    "url": "https://docs.google.com/presentation/d/1kEalh82t02UXrj5M90kIk5hEIesN5SaV/edit?usp=sharing&ouid=114917948854543030422&rtpof=true&sd=true",
+    "category": "ppt-theory",
+    "description": "doc"
+  },
   {
     "title": "pappershub",
     "url": "https://pappers-hub.netlify.app/",
