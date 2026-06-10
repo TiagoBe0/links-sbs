@@ -12,15 +12,20 @@
     "description": "doc"
   },
     {
-    "title": "Carbono Amorfo I",
+    "title": "Carbono Amorfo",
     "url": "https://docs.google.com/presentation/d/1Kv0D7yhNEqBekh1vwePa0E3VXzi6ExL06g1MJ5r57_g/edit?usp=sharing",
+    "category": "ppt",
+    "description": "doc"
+  },    {
+    "title": "Energy Vacancy Formation CANTOR",
+    "url": "https://docs.google.com/presentation/d/1nr_SlgdlAwILP8fN0yaeN6a2uMMsuEnO/edit?usp=sharing&ouid=114917948854543030422&rtpof=true&sd=true",
     "category": "ppt",
     "description": "doc"
   }, 
         {
     "title": "Carbono Amorfo II",
     "url": "https://docs.google.com/presentation/d/1xTsbRRf8_7e5o8GdWKhdy2jw9haFtg3o/edit?usp=sharing&ouid=114917948854543030422&rtpof=true&sd=true",
-    "category": "ppt",
+    "category": "ppt-theory",
     "description": "doc"
   }, 
     {
@@ -28,9 +33,14 @@
     "url": "https://docs.google.com/presentation/d/1lcDWZ963TjFF-1K4KqkQ41dVV78HpJKNLk05rS5HD6A/edit?usp=sharing",
     "category": "ppt",
     "description": "doc"
+  },  {
+    "title": "Cantor Energy Vacancy Formation",
+    "url": "https://docs.google.com/presentation/d/1nr_SlgdlAwILP8fN0yaeN6a2uMMsuEnO/edit?usp=sharing&ouid=114917948854543030422&rtpof=true&sd=true",
+    "category": "ppt",
+    "description": "doc"
   },
      {
-    "title": "Carbono Amorfo Teoría",
+    "title": "Carbono Amorfo I",
     "url": "https://docs.google.com/presentation/d/13HXiXmzHnn_u9OuW27EZT1Wox8eUIRZ0/edit?usp=sharing&ouid=105907419344136001306&rtpof=true&sd=true",
     "category": "ppt-theory",
     "description": "doc"
@@ -50,6 +60,11 @@
               {
     "title": "Radiation Damage",
     "url": "https://docs.google.com/presentation/d/17gMOaf1uuTPkddi-Ue3BL1-8z0B_mlmG/edit?usp=sharing&ouid=114917948854543030422&rtpof=true&sd=true",
+    "category": "ppt-theory",
+    "description": "doc"
+  },          {
+    "title": "Energy Vacancy Formation",
+    "url": "https://docs.google.com/presentation/d/1NtTDlczjOP73T7JZLrLr3MKEoxiCF5pv/edit?usp=sharing&ouid=114917948854543030422&rtpof=true&sd=true",
     "category": "ppt-theory",
     "description": "doc"
   },
