@@ -110,6 +110,12 @@
     "category": "autor",
     "description": "Visualizar y descargar simulaciones"
   },
+        {
+    "title": "LAMMPS-log-graficator",
+    "url": "https://log-lammps-graficator-35izgbauwatzfbgbowdgjp.streamlit.app/",
+    "category": "autor",
+    "description": "Visualizar logs lammps"
+  },
   {
     "title": "teoria daño por radiacion",
     "url": "https://primary-radiation-damage.netlify.app/",
