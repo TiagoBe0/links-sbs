@@ -46,8 +46,13 @@
     "description": "doc"
   },
       {
-    "title": "Mecanica Estadistica",
+    "title": "Mecanica Estadistica I",
     "url": "https://docs.google.com/presentation/d/1OwVgeqgTGnr9WmFNcI1vp3lFpOvOwQ0R/edit?usp=sharing&ouid=114917948854543030422&rtpof=true&sd=true",
+    "category": "ppt-theory",
+    "description": "doc"
+  },   {
+    "title": "Mecanica Estadistica II",
+    "url": "https://docs.google.com/presentation/d/13HXiXmzHnn_u9OuW27EZT1Wox8eUIRZ0/edit?usp=drive_link&ouid=105907419344136001306&rtpof=true&sd=true",
     "category": "ppt-theory",
     "description": "doc"
   },
